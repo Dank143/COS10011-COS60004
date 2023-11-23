@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Lab 2, Task 3">
+  <meta name="keywords" content="HTML, Form, tags">
+  <meta name="author" content="Hong Hai Dang Nguyen">
+  <title>Lecture 3 - HTML Form</title>
+</head>
+<body>
+<a href="http://www.swinbrune.edu"><img src="logo.png" alt="Logo"></a>
+<h1>CWA Help Desk Appointment</h1>
+<p>The Help Desk is located in ATC 620. Open 10:30 to 19:00 Monday to Friday</p>
+<p>Check Blackboard for when CWA tutors will be there.</p>
+
+<form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+    <fieldset>
+        <legend>Student details</legend>
+        <p><label for="id">Student ID</label> 
+            <input type="text" name="id" id="id" required="required" minlength="7" maxlength="10" size="10" pattern="[0-9]+" title="Please enter a valid student ID (only integers)."/>
+        </p>
+        <p>
+            <label for="given_name">Given Name</label> 
+            <input type="text" name="given_name" id="given_name" required="required" maxlength="15" size="15" pattern="[A-Za-z ]+" title="Please enter alphabetic characters only."/>
+
+            <label for="family_name">Family Name</label> 
+            <input type="text" name="family_name" id="family_name" required="required" maxlength="15" size="15" pattern="[A-Za-z ]+" title="Please enter alphabetic characters only."/>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Your unit</legend>
+        <p>
+            <input type="radio" id="cos10011" name="unit" value="cos10011"/>
+            <label for="cos10011">COS10011</label> 
+
+            <input type="radio" id="cos60004" name="unit" value="cos60004"/>
+            <label for="cos60004">COS60004</label> 
+
+            <input type="radio" id="cos60007" name="unit" value="cos60007"/>            
+            <label for="cos60007">COS60007</label>
+        </p>
+        <p>
+            <label for="tutor">Your Tutor</label> 
+                <select name="tutor" id="tutor">
+                    <option value="">Please Select</option>			
+                    <option value="Dan">Dan</option>
+                    <option value="Hans">Hans</option>
+                    <option value="Jan">Jan</option>
+                </select>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Issue</legend>
+        <p>
+            <label for="html">HMTL</label> 
+            <input type="checkbox" id="html" name="category[]" value="html" checked="checked"/>
+            
+            <label for="css">CSS</label> 
+            <input type="checkbox" id="css" name="category[]" value="css"/>
+            
+            <label for="javascript">JavaScript</label> 
+            <input type="checkbox" id="javascript" name="category[]" value="javascript"/>
+
+            <label for="php">PHP</label> 
+            <input type="checkbox" id="php" name="category[]" value="php"/>
+
+            <label for="mysql">MySQL</label> 
+            <input type="checkbox" id="mysql" name="category[]" value="mysql"/>
+        </p>
+        <p>
+            <label for="doi">Description of Issue</label>
+        </p>
+        <p>
+            <textarea id="doi" name="doi" rows="4" cols="40" placeholder="Write description of your problem here..."></textarea>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Preferred Date / Time</legend>
+        <p><label for="date">Date</label> 
+            <input type="text" name="date" id="date" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" title="Please enter a valid date in the format dd/mm/yyyy."/>
+        </p>
+        <p><label for="time">Time</label> 
+            <input type="text" name="time" id="time" placeholder="00:00" maxlength="5" size="5" pattern="[01][0-9]:[0-5][0-9]" title="Please enter a valid time in the format hh:mm (00:00 - 19:59)."/>
+        </p>
+    </fieldset>
+       
+
+    <input type= "submit" value="Book"/>
+	<input type= "reset" value="Reset Form"/>
+</form>
+</body>
+</html>
