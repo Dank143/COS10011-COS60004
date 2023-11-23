@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles/styles.css" rel="stylesheet">
+  <title>Apply - Dank's IT Company</title>
+</head>
+<body>
+  <header>
+    <h1>Job Application Form</h1>
+  </header>    
+  <nav>
+    <ul>
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="jobs.html">Job Descriptions</a></li>
+      <li><a href="apply.html" class="active">Job Application</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="enhancements.html">Enhancements</a></li>
+      <li><a href="mailto:103503191.student.swin.edu.au">Contact Us</a></li>
+    </ul>
+  </nav>
+  <main class="apply">
+    <form id="application-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+        <label for="job-reference">Job Reference Number:</label>
+        <input type="text" id="job-reference" name="job-reference" pattern="[A-Za-z0-9]{5}" required><br>
+        
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" maxlength="20" required><br>
+        
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" maxlength="20" required><br>
+        
+        <label for="date-of-birth">Date of Birth:</label>
+        <input type="text" id="date-of-birth" name="date-of-birth" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required><br>
+        
+        <fieldset>
+            <legend>Gender:</legend>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </fieldset><br>
+        
+        <label for="street-address">Street Address:</label>
+        <input type="text" id="street-address" name="street-address" maxlength="40" required><br>
+        
+        <label for="suburb">Suburb/Town:</label>
+        <input type="text" id="suburb" name="suburb" maxlength="40" required><br>
+        
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+            <option value="" disabled selected>Select State</option> <!-- Placeholder option -->
+            <option value="VIC">VIC</option>
+            <option value="NSW">NSW</option>
+            <option value="QLD">QLD</option>
+            <option value="NT">NT</option>
+            <option value="WA">WA</option>
+            <option value="SA">SA</option>
+            <option value="TAS">TAS</option>
+            <option value="ACT">ACT</option>
+        </select><br>
+        
+        
+        <label for="postcode">Postcode:</label>
+        <input type="text" id="postcode" name="postcode" pattern="\d{4}" required><br>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="\d{8,12}" required><br>
+        
+        <label>Skills:</label><br>
+        <input type="checkbox" name="skills" value="programming"> Programming  &nbsp;
+        <input type="checkbox" name="skills" value="database"> Database  &nbsp;
+        <input type="checkbox" name="skills" value="ui-ux"> UI/UX  &nbsp;
+        <input type="checkbox" name="skills" value="team"> Teamwork  &nbsp;
+        <input type="checkbox" name="skills" value="presentation"> Presentation  &nbsp;
+        <input type="checkbox" name="skills" value="mar-pri"> Market prediction &nbsp;
+        <input type="checkbox" name="skills" value="other-skills"> Other skills...<br>
+        
+        <label for="other-skills">Other Skills:</label>
+        <textarea id="other-skills" name="other-skills" rows="4"></textarea><br>
+        
+        <input type="submit" value="Apply">
+    </form>
+</main>
+  <footer>
+    <p>&copy; 2023 Dank's IT Company all rights reserved. Contact us at <a href="mailto:103503191.student.swin.edu.au">103503191.student.swin.edu.au</a></p>
+  </footer>
+</body>
+</html>
